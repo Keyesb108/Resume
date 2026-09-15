@@ -161,7 +161,7 @@
             margin-top: 8px;
         }
 
-        /* --- Detailed Sections (CV / Portfolio / Contact) --- */
+        /* --- Detailed Sections --- */
         .section-block {
             margin-bottom: 50px;
             padding-top: 20px;
@@ -217,29 +217,10 @@
             background: #ebe9e1;
         }
 
-        .contact-box {
-            border: 1px solid var(--text-main);
-            padding: 25px;
-            background: #eae8e1;
-        }
-
-        .contact-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 0;
-            border-bottom: 1px solid var(--border-color);
-            font-size: 0.9rem;
-        }
-
-        .contact-row:last-child {
-            border-bottom: none;
-        }
-
         @media (max-width: 700px) {
             .hero h1 { font-size: 2.2rem; }
             .grid-container { grid-template-columns: 1fr; }
             header { flex-direction: column; align-items: flex-start; gap: 15px; }
-            .contact-row { flex-direction: column; gap: 5px; }
         }
     </style>
 </head>
@@ -248,30 +229,27 @@
 <div class="container">
     <!-- Header Navigation -->
     <header>
-        <a href="#" class="logo">
+        <a href="index.html" class="logo">
             <span class="logo-icon"></span> AUGUSTIN BRIL
         </a>
         <nav>
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
+            <a href="about.html">About & Contact</a>
+            <a href="portfolio.html">Portfolio</a>
             <a href="#cv">CV / Resume</a>
-            <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <!-- Hero Banner -->
-    <section class="hero" id="about">
+    <section class="hero">
         <h1>Étudiant en 2<sup>e</sup> année à l’ESILV.</h1>
         <p class="hero-sub">
             Je suis un futur ingénieur en cybersécurité passionné par la résolution de problèmes et les technologies. J’apporte une pensée analytique, de la créativité et une grande attention aux détails dans chaque défi, tout en m’épanouissant dans les environnements collaboratifs.
         </p>
-        <p class="meta-line">Nationalité: Français • Statut: Aîné de 3 frères et 1 sœur • Langues: Français, Anglais, Italien</p>
+        <p class="meta-line">Nationalité : Français • Fratrie : Aîné de 3 frères et 1 sœur • Langues : Français, Anglais, Italien</p>
     </section>
 
     <!-- 3x3 Overview Metrics Grid -->
     <section class="grid-container">
-        
-        <!-- Row 1: Profile -->
         <div class="grid-card">
             <div>
                 <div class="card-label">Éducation Actuelle</div>
@@ -296,7 +274,6 @@
             <div class="card-sub">Lauréat Projet PIX 1 (ESILV)</div>
         </div>
 
-        <!-- Row 2: Skills & Tech -->
         <div class="grid-card">
             <div>
                 <div class="card-label">Programmation</div>
@@ -313,9 +290,6 @@
             <div class="card-sub">Bilingue Anglais / Français (2025)</div>
         </div>
 
-
-
-        <!-- Row 3: Languages & Contact -->
         <div class="grid-card">
             <div>
                 <div class="card-label">Langues</div>
@@ -323,106 +297,33 @@
             </div>
             <div class="card-sub">FR (Maternelle), EN (Courant), IT (Courant)</div>
         </div>
-        
+
         <div class="grid-card">
             <div>
                 <div class="card-label">Projets Majeurs</div>
                 <div class="card-value">6</div>
             </div>
+            <div class="card-sub">Ingénierie & Physique</div>
         </div>
 
         <div class="grid-card">
             <div>
-                <div class="card-label">Contact Téléphone</div>
-                <div class="card-value">+33 6 29 14 10 00</div>
+                <div class="card-label">Domaine Clef</div>
+                <div class="card-value">Prototypage</div>
             </div>
+            <div class="card-sub">CAO, Impression 3D, Laser</div>
         </div>
 
         <div class="grid-card">
             <div>
-                <div class="card-label">Email</div>
-                <div class="card-value">augustin.bril@gmail.com</div>
+                <div class="card-label">Engagement</div>
+                <div class="card-value">Scoutisme</div>
             </div>
-        </div>
-
-    </section>
-
-    <!-- Portfolio Section -->
-    <section class="section-block" id="portfolio">
-        <h2 class="section-title">■ Portfolio & Projets</h2>
-        
-        <div class="timeline-item">
-            <div class="timeline-date">2025 - 2026 • Projet PIX 1 (ESILV)</div>
-            <div class="timeline-title">Camion Pompier & Grande Échelle Rétractable — Prix d'Excellence</div>
-            <div class="timeline-desc">
-                Conception mécanique et fabrication multimatériaux (impression 3D, découpe laser du bois, carton) au sein de l'équipe 401E « English Truck ».
-                <br>• <strong>Élévation :</strong> Double système à encliquetage (ratchet & pawl) assurant la sécurité sous charge (200 g).
-                <br>• <strong>Extension :</strong> Échelle télescopique à crémaillère en 3 parties atteignant un taux de déploiement de 223 %.
-                <br>• <strong>Rotation :</strong> Tourelle 360° guidée par un engrenage conique masqué.
-            </div>
-            <div class="tag-list">
-                <span class="tag">Impression 3D</span>
-                <span class="tag">Découpe Laser</span>
-                <span class="tag">Conception Mécanique</span>
-                <span class="tag">CAO</span>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-date">2024 - 2025 • IB Physics HL</div>
-            <div class="timeline-title">Mémoire Étendu : Aerodynamics & Propeller Thrust</div>
-            <div class="timeline-desc">
-                Étude théorique et expérimentale de l'impact de l'angle de pas des pales (0° à 45°) sur la poussée dynamique d'une hélice.
-                <br>• Conception d'un banc d'essai sur-mesure en impression 3D maintenu à 3 000 RPM constants.
-                <br>• Mesure du flux d'air par anémomètre et modélisation expérimentale face au modèle théorique (écart max de 10 %).
-            </div>
-            <div class="tag-list">
-                <span class="tag">Physique</span>
-                <span class="tag">Modélisation</span>
-                <span class="tag">Impression 3D</span>
-                <span class="tag">Analyse de Données</span>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-date">2023 - 2024</div>
-            <div class="timeline-title">Application Mobile : Dungeon and Dragon (Fitness & Jeu Vidéo)</div>
-            <div class="timeline-desc">Développement en Java et Kotlin avec 4 amis d’un concept créatif mêlant fitness et jeu vidéo, intégrant l’activité physique à des thèmes fantastiques.</div>
-            <div class="tag-list">
-                <span class="tag">Java</span>
-                <span class="tag">Kotlin</span>
-                <span class="tag">Mobile</span>
-                <span class="tag">GameDev</span>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-date">2021 - 2022 • Projet Personnel IB MYP</div>
-            <div class="timeline-title">Distributeur Automatique de Médicaments</div>
-            <div class="timeline-desc">
-                Conception d'un dispositif médical modulaire automatisé pour personnes âgées ou à mobilité réduite.
-                <br>• Boîtier modulaire imprimé en 3D avec assemblage magnétique.
-                <br>• Contrôle embarqué par carte Arduino, servomoteurs, écran LCD I2C et signaux d'alerte sonores.
-            </div>
-            <div class="tag-list">
-                <span class="tag">Arduino</span>
-                <span class="tag">C/C++</span>
-                <span class="tag">Électronique</span>
-                <span class="tag">Impression 3D</span>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-date">Recherches & Mémoires Académiques IB</div>
-            <div class="timeline-desc">
-                • <strong>Physique :</strong> Étude de la relation entre le niveau d’eau dans un verre à vin et la fréquence du son produit.<br>
-                • <strong>Chimie :</strong> Étude de la relation entre la tension appliquée entre deux plaques de cuivre et la variation de masse de l’anode lors d’une électrolyse.<br>
-                • <strong>Mathématiques :</strong> Recherche de l’angle optimal pour un service court parfait au badminton.
-            </div>
+            <div class="card-sub">Leadership & Esprit d'équipe</div>
         </div>
     </section>
 
-    <!-- CV Section -->
+    <!-- CV Section (Placée en premier) -->
     <section class="section-block" id="cv">
         <h2 class="section-title">■ Parcours & Éducation</h2>
 
@@ -482,33 +383,26 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="section-block" id="contact">
-        <h2 class="section-title">■ Contact & Informations</h2>
-        <div class="contact-box">
-            <div class="contact-row">
-                <span>Nom :</span>
-                <strong>Augustin BRIL</strong>
-            </div>
-            <div class="contact-row">
-                <span>Statut :</span>
-                <strong>Étudiant 2<sup>e</sup> année — ESILV Paris</strong>
-            </div>
-            <div class="contact-row">
-                <span>Téléphone :</span>
-                <strong>+33 6 29 14 10 00</strong>
-            </div>
-            <div class="contact-row">
-                <span>Email :</span>
-                <strong>augustin.bril@gmail.com</strong>
-            </div>
-            <div class="contact-row">
-                <span>Langues :</span>
-                <strong>Français (maternelle), Anglais (courant), Italien (courant)</strong>
-            </div>
+    <!-- Portfolio Section (Résumé avec lien vers la page dédiée) -->
+    <section class="section-block" id="portfolio">
+        <h2 class="section-title">■ Portfolio & Projets</h2>
+        
+        <div class="timeline-item">
+            <div class="timeline-date">2025 - 2026 • Projet PIX 1 (ESILV)</div>
+            <div class="timeline-title">Camion Pompier & Grande Échelle Rétractable — Prix d'Excellence</div>
+            <div class="timeline-desc">Conception mécanique et fabrication multimatériaux au sein de l'équipe 401E « English Track ».</div>
         </div>
-    </section>
 
+        <div class="timeline-item">
+            <div class="timeline-date">2024 - 2025 • IB Physics HL</div>
+            <div class="timeline-title">Propeller Pitch & Dynamic Thrust Analysis</div>
+            <div class="timeline-desc">Étude théorique et expérimentale de l'impact de l'angle de pas des pales sur la poussée dynamique d'une hélice.</div>
+        </div>
+
+        <p style="margin-top: 20px;">
+            <a href="portfolio.html" style="color: var(--text-main); font-weight: bold;">Voir tous les projets détaillés sur la page Portfolio →</a>
+        </p>
+    </section>
 </div>
 
 </body>
