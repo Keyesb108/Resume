@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Augustin Bril | Futur Ingénieur en Cybersécurité</title>
+    <style>
+        :root {
+            --bg-color: #f4f3ef;
+            --card-bg: #f4f3ef;
+            --text-main: #111111;
+            --text-muted: #555555;
+            --text-light: #777777;
+            --border-color: #d8d6cf;
+            --font-mono: 'Courier New', Courier, monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-mono);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px 80px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 860px;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+            font-size: 1rem;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            color: var(--text-main);
+            text-transform: uppercase;
+        }
+
+        .logo-icon {
+            width: 12px;
+            height: 12px;
+            background: currentColor;
+            display: inline-block;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.15s ease;
+        }
+
+        nav a:hover {
+            color: var(--text-main);
+            text-decoration: underline;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            line-height: 1.1;
+            font-weight: 400;
+            letter-spacing: -1px;
+            margin-bottom: 25px;
+            color: var(--text-main);
+        }
+
+        .hero-sub {
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.6;
+            max-width: 760px;
+            margin-bottom: 20px;
+        }
+
+        .meta-line {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-top: 15px;
+        }
+
+        /* --- 3x3 Metric Grid --- */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border: 1px solid var(--border-color);
+            margin-top: 30px;
+            margin-bottom: 60px;
+            background-color: var(--border-color);
+            gap: 1px;
+        }
+
+        .grid-card {
+            background-color: var(--card-bg);
+            padding: 22px 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 140px;
+        }
+
+        .card-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+
+        .card-value {
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 1.2;
+            color: var(--text-main);
+            word-break: break-word;
+        }
+
+        .card-sub {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-top: 8px;
+        }
+
+        /* --- Detailed Sections (CV / Portfolio / Contact) --- */
+        .section-block {
+            margin-bottom: 50px;
+            padding-top: 20px;
+            border-top: 1px dashed var(--border-color);
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .timeline-item {
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 2px solid var(--text-main);
+        }
+
+        .timeline-date {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 4px;
+        }
+
+        .timeline-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--text-main);
+        }
+
+        .timeline-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 6px;
+            line-height: 1.5;
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .tag {
+            border: 1px solid var(--border-color);
+            padding: 4px 10px;
+            font-size: 0.8rem;
+            background: #ebe9e1;
+        }
+
+        .contact-box {
+            border: 1px solid var(--text-main);
+            padding: 25px;
+            background: #eae8e1;
+        }
+
+        .contact-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        .contact-row:last-child {
+            border-bottom: none;
+        }
+
+        @media (max-width: 700px) {
+            .hero h1 { font-size: 2.2rem; }
+            .grid-container { grid-template-columns: 1fr; }
+            header { flex-direction: column; align-items: flex-start; gap: 15px; }
+            .contact-row { flex-direction: column; gap: 5px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header Navigation -->
+    <header>
+        <a href="#" class="logo">
+            <span class="logo-icon"></span> AUGUSTIN BRIL
+        </a>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#cv">CV / Resume</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero" id="about">
+        <h1>Étudiant en 2<sup>e</sup> année à l’ESILV.</h1>
+        <p class="hero-sub">
+            Je suis un futur ingénieur en cybersécurité passionné par la résolution de problèmes et les technologies. J’apporte une pensée analytique, de la créativité et une grande attention aux détails dans chaque défi, tout en m’épanouissant dans les environnements collaboratifs.
+        </p>
+        <p class="meta-line">Nationalité: Français • Statut: Aîné de 3 frères et 1 sœur • Langues: Français, Anglais, Italien</p>
+    </section>
+
+    <!-- 3x3 Overview Metrics Grid -->
+    <section class="grid-container">
+        
+        <!-- Row 1: Profile -->
+        <div class="grid-card">
+            <div>
+                <div class="card-label">Éducation Actuelle</div>
+                <div class="card-value">ESILV</div>
+            </div>
+            <div class="card-sub">2<sup>e</sup> année prépa intégrée</div>
+        </div>
+
+        <div class="grid-card">
+            <div>
+                <div class="card-label">Spécialité Visée</div>
+                <div class="card-value">Cybersécurité</div>
+            </div>
+            <div class="card-sub">Ingénierie & Systèmes</div>
+        </div>
+
+        <div class="grid-card">
+            <div>
+                <div class="card-label">Distinction</div>
+                <div class="card-value">Prix d'Excellence</div>
+            </div>
+            <div class="card-sub">Lauréat Projet PIX 1 (ESILV)</div>
+        </div>
+
+        <!-- Row 2: Skills & Tech -->
+        <div class="grid-card">
+            <div>
+                <div class="card-label">Programmation</div>
+                <div class="card-value">C# / Java</div>
+            </div>
+            <div class="card-sub">Kotlin • Python • Arduino</div>
+        </div>
+
+        <div class="grid-card">
+            <div>
+                <div class="card-label">Diplôme</div>
+                <div class="card-value">Bac IB</div>
+            </div>
+            <div class="card-sub">Bilingue Anglais / Français (2025)</div>
+        </div>
+
+
+
+        <!-- Row 3: Languages & Contact -->
+        <div class="grid-card">
+            <div>
+                <div class="card-label">Langues</div>
+                <div class="card-value">3 Langues</div>
+            </div>
+            <div class="card-sub">FR (Maternelle), EN (Courant), IT (Courant)</div>
+        </div>
+        
+        <div class="grid-card">
+            <div>
+                <div class="card-label">Projets Majeurs</div>
+                <div class="card-value">6</div>
+            </div>
+        </div>
+
+        <div class="grid-card">
+            <div>
+                <div class="card-label">Contact Téléphone</div>
+                <div class="card-value">+33 6 29 14 10 00</div>
+            </div>
+        </div>
+
+        <div class="grid-card">
+            <div>
+                <div class="card-label">Email</div>
+                <div class="card-value">augustin.bril@gmail.com</div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section-block" id="portfolio">
+        <h2 class="section-title">■ Portfolio & Projets</h2>
+        
+        <div class="timeline-item">
+            <div class="timeline-date">2025 - 2026 • Projet PIX 1 (ESILV)</div>
+            <div class="timeline-title">Camion Pompier & Grande Échelle Rétractable — Prix d'Excellence</div>
+            <div class="timeline-desc">
+                Conception mécanique et fabrication multimatériaux (impression 3D, découpe laser du bois, carton) au sein de l'équipe 401E « English Truck ».
+                <br>• <strong>Élévation :</strong> Double système à encliquetage (ratchet & pawl) assurant la sécurité sous charge (200 g).
+                <br>• <strong>Extension :</strong> Échelle télescopique à crémaillère en 3 parties atteignant un taux de déploiement de 223 %.
+                <br>• <strong>Rotation :</strong> Tourelle 360° guidée par un engrenage conique masqué.
+            </div>
+            <div class="tag-list">
+                <span class="tag">Impression 3D</span>
+                <span class="tag">Découpe Laser</span>
+                <span class="tag">Conception Mécanique</span>
+                <span class="tag">CAO</span>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">2024 - 2025 • IB Physics HL</div>
+            <div class="timeline-title">Mémoire Étendu : Aerodynamics & Propeller Thrust</div>
+            <div class="timeline-desc">
+                Étude théorique et expérimentale de l'impact de l'angle de pas des pales (0° à 45°) sur la poussée dynamique d'une hélice.
+                <br>• Conception d'un banc d'essai sur-mesure en impression 3D maintenu à 3 000 RPM constants.
+                <br>• Mesure du flux d'air par anémomètre et modélisation expérimentale face au modèle théorique (écart max de 10 %).
+            </div>
+            <div class="tag-list">
+                <span class="tag">Physique</span>
+                <span class="tag">Modélisation</span>
+                <span class="tag">Impression 3D</span>
+                <span class="tag">Analyse de Données</span>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">2023 - 2024</div>
+            <div class="timeline-title">Application Mobile : Dungeon and Dragon (Fitness & Jeu Vidéo)</div>
+            <div class="timeline-desc">Développement en Java et Kotlin avec 4 amis d’un concept créatif mêlant fitness et jeu vidéo, intégrant l’activité physique à des thèmes fantastiques.</div>
+            <div class="tag-list">
+                <span class="tag">Java</span>
+                <span class="tag">Kotlin</span>
+                <span class="tag">Mobile</span>
+                <span class="tag">GameDev</span>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">2021 - 2022 • Projet Personnel IB MYP</div>
+            <div class="timeline-title">Distributeur Automatique de Médicaments</div>
+            <div class="timeline-desc">
+                Conception d'un dispositif médical modulaire automatisé pour personnes âgées ou à mobilité réduite.
+                <br>• Boîtier modulaire imprimé en 3D avec assemblage magnétique.
+                <br>• Contrôle embarqué par carte Arduino, servomoteurs, écran LCD I2C et signaux d'alerte sonores.
+            </div>
+            <div class="tag-list">
+                <span class="tag">Arduino</span>
+                <span class="tag">C/C++</span>
+                <span class="tag">Électronique</span>
+                <span class="tag">Impression 3D</span>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">Recherches & Mémoires Académiques IB</div>
+            <div class="timeline-desc">
+                • <strong>Physique :</strong> Étude de la relation entre le niveau d’eau dans un verre à vin et la fréquence du son produit.<br>
+                • <strong>Chimie :</strong> Étude de la relation entre la tension appliquée entre deux plaques de cuivre et la variation de masse de l’anode lors d’une électrolyse.<br>
+                • <strong>Mathématiques :</strong> Recherche de l’angle optimal pour un service court parfait au badminton.
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Section -->
+    <section class="section-block" id="cv">
+        <h2 class="section-title">■ Parcours & Éducation</h2>
+
+        <div class="timeline-item">
+            <div class="timeline-date">2025 - Présent --- Paris, France</div>
+            <div class="timeline-title">ESILV — École d’Ingénieurs Supérieure Léonard de Vinci</div>
+            <div class="timeline-desc">2<sup>e</sup> année de prépa intégrée, parcours anglophone. Spécialisation future : Cybersécurité.</div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">2023 - 2025 --- La Haye, Pays-Bas</div>
+            <div class="timeline-title">International School of the Hague</div>
+            <div class="timeline-desc">Programme IB DP (Y12 et Y13). Obtenu le 01/07/2025.</div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">2021 - 2023 --- Bonn, Allemagne</div>
+            <div class="timeline-title">Bonn International School</div>
+            <div class="timeline-desc">Programme IB MYP (Y10 et Y11).</div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">2018 - 2021 --- Paris, France</div>
+            <div class="timeline-title">Collège Stanislas</div>
+            <div class="timeline-desc">Cursus scolaire français (5ème, 4ème et 3ème).</div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">2015 - 2018 --- Rome, Italie</div>
+            <div class="timeline-title">Lycée Chateaubriand</div>
+            <div class="timeline-desc">Cursus français (CM1, CM2 et 6ème).</div>
+        </div>
+
+        <h2 class="section-title" style="margin-top: 40px;">■ Prix & Distinctions</h2>
+        <div class="timeline-desc" style="line-height: 1.8;">
+            • <strong>2026 :</strong> Prix d'Excellence Projet PIX 1 — ESILV (Projet Camion Pompier)<br>
+            • <strong>2025 :</strong> Diplôme du Baccalauréat International (IB) bilingue (anglais/français)<br>
+            • <strong>2025 :</strong> Certificat IB pour résultats remarquables en English B (décerné par Alma Trumic)<br>
+            • <strong>2024 :</strong> Certificat IB de reconnaissance, attribut du profil « Principled » (décerné par Joseph Bayot)<br>
+            • <strong>2023 :</strong> Diplôme bilingue du programme MYP (anglais et français)<br>
+            • <strong>2021 :</strong> Brevet des collèges avec mention « Très Bien »
+        </div>
+
+        <h2 class="section-title" style="margin-top: 40px;">■ Compétences & Loisirs</h2>
+        <div class="tag-list" style="margin-bottom: 20px;">
+            <span class="tag">Résolution de problèmes</span>
+            <span class="tag">Pensée analytique</span>
+            <span class="tag">Travail en équipe</span>
+            <span class="tag">Gestion de projet</span>
+            <span class="tag">Conception CAO</span>
+            <span class="tag">Impression 3D & Découpe Laser</span>
+            <span class="tag">Pilotage de drones</span>
+            <span class="tag">Défis Cybersécurité</span>
+        </div>
+        <div class="timeline-desc">
+            <strong>Sports & Engagements :</strong> Natation (10 ans), Tennis (7 ans), Badminton (4 ans), Scoutisme.
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-block" id="contact">
+        <h2 class="section-title">■ Contact & Informations</h2>
+        <div class="contact-box">
+            <div class="contact-row">
+                <span>Nom :</span>
+                <strong>Augustin BRIL</strong>
+            </div>
+            <div class="contact-row">
+                <span>Statut :</span>
+                <strong>Étudiant 2<sup>e</sup> année — ESILV Paris</strong>
+            </div>
+            <div class="contact-row">
+                <span>Téléphone :</span>
+                <strong>+33 6 29 14 10 00</strong>
+            </div>
+            <div class="contact-row">
+                <span>Email :</span>
+                <strong>augustin.bril@gmail.com</strong>
+            </div>
+            <div class="contact-row">
+                <span>Langues :</span>
+                <strong>Français (maternelle), Anglais (courant), Italien (courant)</strong>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
