@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About & Contact | Augustin Bril</title>
+    <style>
+        :root {
+            --bg-color: #f4f3ef;
+            --text-main: #111111;
+            --text-muted: #555555;
+            --border-color: #d8d6cf;
+            --font-mono: 'Courier New', Courier, monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-mono);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px 80px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 860px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+            font-size: 1rem;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            color: var(--text-main);
+            text-transform: uppercase;
+        }
+
+        .logo-icon {
+            width: 12px;
+            height: 12px;
+            background: currentColor;
+            display: inline-block;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            color: var(--text-main);
+            text-decoration: underline;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
+
+        .contact-box {
+            border: 1px solid var(--text-main);
+            padding: 25px;
+            background: #eae8e1;
+            margin-top: 20px;
+        }
+
+        .contact-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.95rem;
+        }
+
+        .contact-row:last-child {
+            border-bottom: none;
+        }
+
+        @media (max-width: 700px) {
+            header { flex-direction: column; align-items: flex-start; gap: 15px; }
+            .contact-row { flex-direction: column; gap: 5px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <a href="index.html" class="logo">
+            <span class="logo-icon"></span> AUGUSTIN BRIL
+        </a>
+        <nav>
+            <a href="about.html">About & Contact</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="index.html#cv">CV / Resume</a>
+        </nav>
+    </header>
+
+    <h1>About & Contact</h1>
+
+    <div class="contact-box">
+        <div class="contact-row">
+            <span>Nom :</span>
+            <strong>Augustin BRIL</strong>
+        </div>
+        <div class="contact-row">
+            <span>Statut :</span>
+            <strong>Étudiant 2<sup>e</sup> année — ESILV Paris</strong>
+        </div>
+        <div class="contact-row">
+            <span>Téléphone :</span>
+            <strong>+33 6 29 14 10 00</strong>
+        </div>
+        <div class="contact-row">
+            <span>Email :</span>
+            <strong>augustin.bril@gmail.com</strong>
+        </div>
+        <div class="contact-row">
+            <span>GitHub :</span>
+            <strong><a href="https://github.com/keyesb108" target="_blank" style="color: inherit;">keyesb108</a></strong>
+        </div>
+        <div class="contact-row">
+            <span>Discord :</span>
+            <strong>keyesb108</strong>
+        </div>
+        <div class="contact-row">
+            <span>Langues :</span>
+            <strong>Français (maternelle), Anglais (courant), Italien (courant)</strong>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
