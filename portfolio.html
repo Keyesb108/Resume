@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -15,164 +14,161 @@
             --font-mono: 'Courier New', Courier, monospace;
         }
 
-```
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    body {
-        background-color: var(--bg-color);
-        color: var(--text-main);
-        font-family: var(--font-mono);
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        padding: 40px 20px 80px 20px;
-    }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-mono);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px 80px 20px;
+        }
 
-    .container {
-        width: 100%;
-        max-width: 860px;
-    }
+        .container {
+            width: 100%;
+            max-width: 860px;
+        }
 
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 50px;
-        border-bottom: 1px solid var(--border-color);
-        padding-bottom: 20px;
-    }
-
-    .logo {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-weight: bold;
-        font-size: 1rem;
-        letter-spacing: 1.5px;
-        text-decoration: none;
-        color: var(--text-main);
-        text-transform: uppercase;
-    }
-
-    .logo-icon {
-        width: 12px;
-        height: 12px;
-        background: currentColor;
-        display: inline-block;
-    }
-
-    nav {
-        display: flex;
-        gap: 20px;
-    }
-
-    nav a {
-        color: var(--text-muted);
-        text-decoration: none;
-        font-size: 0.85rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-
-    nav a:hover {
-        color: var(--text-main);
-        text-decoration: underline;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-        margin-bottom: 40px;
-        font-weight: 400;
-    }
-
-    .project-card {
-        border: 1px solid var(--border-color);
-        padding: 25px;
-        background: #ebe9e1;
-        margin-bottom: 40px;
-    }
-
-    .project-title {
-        font-size: 1.3rem;
-        font-weight: bold;
-        margin-bottom: 20px;
-    }
-
-    .project-subtitle {
-        font-size: 0.9rem;
-        color: var(--text-light);
-        margin-bottom: 15px;
-    }
-
-    .project-images {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 15px;
-        margin-bottom: 20px;
-    }
-
-    .project-images img {
-        width: 100%;
-        height: 260px;
-        object-fit: cover;
-        display: block;
-        border: 1px solid var(--border-color);
-        background: var(--bg-color);
-    }
-
-    .project-desc {
-        font-size: 0.95rem;
-        line-height: 1.6;
-        color: var(--text-muted);
-        margin-bottom: 20px;
-    }
-
-    .award-box {
-        border-left: 3px solid var(--text-main);
-        padding-left: 15px;
-        margin: 20px 0;
-        font-size: 0.9rem;
-    }
-
-    .links-list {
-        margin-top: 15px;
-    }
-
-    .links-list a {
-        display: block;
-        color: var(--text-main);
-        text-decoration: underline;
-        font-size: 0.85rem;
-        margin-bottom: 6px;
-        word-break: break-all;
-    }
-
-    @media (max-width: 700px) {
         header {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+            font-size: 1rem;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            color: var(--text-main);
+            text-transform: uppercase;
+        }
+
+        .logo-icon {
+            width: 12px;
+            height: 12px;
+            background: currentColor;
+            display: inline-block;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            color: var(--text-main);
+            text-decoration: underline;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .project-card {
+            border: 1px solid var(--border-color);
+            padding: 25px;
+            background: #ebe9e1;
+            margin-bottom: 40px;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .project-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
         }
 
         .project-images {
-            grid-template-columns: 1fr;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
         }
 
         .project-images img {
-            height: auto;
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            border: 1px solid var(--border-color);
         }
-    }
-</style>
-```
 
+        .project-desc {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .award-box {
+            border-left: 3px solid var(--text-main);
+            padding-left: 15px;
+            margin: 20px 0;
+            font-size: 0.9rem;
+        }
+
+        .links-list {
+            margin-top: 15px;
+        }
+
+        .links-list a {
+            display: block;
+            color: var(--text-main);
+            text-decoration: underline;
+            font-size: 0.85rem;
+            margin-bottom: 6px;
+            word-break: break-all;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .project-images {
+                grid-template-columns: 1fr;
+            }
+
+            .project-images img {
+                height: auto;
+            }
+        }
+    </style>
 </head>
 <body>
 
 <div class="container">
+
     <header>
         <a href="index.html" class="logo">
             <span class="logo-icon"></span> AUGUSTIN BRIL
@@ -184,49 +180,72 @@
         </nav>
     </header>
 
-```
-<h1>Portfolio</h1>
+    <h1>Portfolio</h1>
 
-<!-- Projet 1 -->
-<div class="project-card">
-    <div class="project-title">PIX1 Firefighter Ladder: CAD, 3D Printing & Laser-Cut Wood Mechanism</div>
+    <!-- Projet 1 -->
+    <div class="project-card">
+        <div class="project-title">PIX1 Firefighter Ladder: CAD, 3D Printing & Laser-Cut Wood Mechanism</div>
 
-    <div class="project-images">
-        <img src="images/pix1.png" alt="PIX1 firefighter ladder project">
-        <img src="images/pix2.png" alt="PIX1 firefighter ladder mechanism">
+        <div class="project-images">
+            <img src="images/pix1.png" alt="PIX1 firefighter ladder">
+            <img src="images/pix2.png" alt="PIX1 firefighter ladder mechanism">
+        </div>
+
+        <div class="project-desc">
+            In a team of 6 people, we built a firefighter ladder to answer the specification of the year project PIX1 given by the school management for all students. We were able to combine 3D CAD design, 3D printing and laser cutting on wood to create a solution that exceeded the requirement. In fact, we were able to achieve an extension of the ladder by a factor of 2.13 against the required 2, to achieve the option adjustable elevation from 0 to 90° and the 360° of rotation against the required 90°, and above all support a weight of 2kg (10 times more than required). The use of multiple materials to build the ladder allowed me to gain a lot of experience in tolerances management in a multi-material project. It also allowed me to gain a lot of experience in 3D modelling as I was in charge of the extension and elevation mechanism. The commitment to perfection and perseverance along the project allowed us to receive the award for excellence project from the jury.
+        </div>
+
+        <div class="award-box">
+            🏆 <strong>Campus de Paris — Prix d'Excellence Projet – Équipe 401E (English Track)</strong><br>
+            Augustin Bril, Mathys Le Blay, Guillaume Jonvel, Hugo Baran, Aude Roblet-touly et Cyprien BUQUET.
+        </div>
+
+        <div class="links-list">
+            <strong>References & Resources:</strong>
+            <a href="https://www.esilv.fr/en/student-projects/project-imagination-and-exploration-1/" target="_blank">https://www.esilv.fr/en/student-projects/project-imagination-and-exploration-1/</a>
+            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7504196897499353088/" target="_blank">LinkedIn Project Update</a>
+            <a href="https://drive.google.com/file/d/1ZOUmZUi7C0Itq-SygX-gVlRTmxDu31DU/view?usp=sharing" target="_blank">Project Video</a>
+            <a href="https://drive.google.com/file/d/1_QgnZlzl1BbQcN2WiJthadRUHbEtxuDx/view?usp=sharing" target="_blank">Final Report.pdf</a>
+        </div>
     </div>
 
-    <div class="project-desc">
-        In a team of 6 people, we built a firefighter ladder to answer the specification of the year project PIX1 given by the school management for all students. We were able to combine 3D CAD design, 3D printing and laser cutting on wood to create a solution that exceeded the requirement. In fact, we were able to achieve an extension of the ladder by a factor of 2.13 against the required 2, to achieve the option adjustable elevation from 0 to 90° and the 360° of rotation against the required 90°, and above all support a weight of 2kg (10 times more than required). The use of multiple materials to build the ladder allowed me to gain a lot of experience in tolerances management in a multi-material project. It also allowed me to gain a lot of experience in 3D modelling as I was in charge of the extension and elevation mechanism. The commitment to perfection and perseverance along the project allowed us to receive the award for excellence project from the jury.
+    <!-- Projet 2 -->
+    <div class="project-card">
+        <div class="project-title">Propeller Pitch & Dynamic Thrust Analysis</div>
+
+        <div class="project-images">
+            <img src="images/aero1.png" alt="Propeller experimental setup">
+            <img src="images/aero2.png" alt="Propeller thrust analysis">
+        </div>
+
+        <div class="project-desc">
+            Conducted an independent physics study exploring how blade pitch angles (0°–45°) impact the thrust generated by a propeller spinning at 3,000 RPM. Built a custom test setup using a 3D-printed stand, a DC motor, and a variable power supply, then measured wind speeds with an anemometer to calculate output force in Newtons. Compared experimental results against theoretical aerodynamic equations and thrust coefficient models, achieving a strong correlation (r = 0.9882) and keeping experimental error within 10%. Wrapped up the project by analyzing setup limitations and proposing practical improvements like using brushless motors and ducting to stabilize airflow.
+        </div>
+
+        <div class="links-list">
+            <a href="https://drive.google.com/file/d/10De-BcuOt8YpmUZaGh4mAfJEjYe49c0h/view?usp=sharing" target="_blank">View Report on Google Drive</a>
+        </div>
     </div>
 
-    <div class="award-box">
-        🏆 <strong>Campus de Paris — Prix d'Excellence Projet – Équipe 401E (English Track)</strong><br>
-        Augustin Bril, Mathys Le Blay, Guillaume Jonvel, Hugo Baran, Aude Roblet-touly et Cyprien BUQUET.
+    <!-- Projet 3 -->
+    <div class="project-card">
+        <div class="project-title">Automatic Medicine Dispenser - 3D Printing & Arduino</div>
+
+        <div class="project-images">
+            <img src="images/medicine1.png" alt="Automatic medicine dispenser">
+            <img src="images/medicine2.png" alt="Automatic medicine dispenser Arduino system">
+        </div>
+
+        <div class="project-desc">
+            Designed and built a 3D-printed automatic medicine dispenser to help elderly and disabled people easily get the right dosage of pills at scheduled meal times. Coded an Arduino to control servo motors for dispensing, wired up an LCD screen with an I2C module to display meal schedules and dosage info, and added a buzzer for audio reminders. Modeled and 3D printed the modular plastic body in PLA, using magnets and glue for easy snap-together assembly, refuel access, and potential expansion. Handled the entire project from scratch—troubleshooting C++ libraries on forums, testing materials, and building a fully working prototype.
+        </div>
+
+        <div class="links-list">
+            <a href="https://drive.google.com/file/d/1CtTIdE4Wn3aGT7qWyG-lNEwJnRsJpj3o/view?usp=sharing" target="_blank">View Report on Google Drive</a>
+        </div>
     </div>
 
-    <div class="links-list">
-        <strong>References & Resources:</strong>
-        <a href="https://www.esilv.fr/en/student-projects/project-imagination-and-exploration-1/" target="_blank">https://www.esilv.fr/en/student-projects/project-imagination-and-exploration-1/</a>
-        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7504196897499353088/" target="_blank">LinkedIn Project Update</a>
-        <a href="https://drive.google.com/file/d/1ZOUmZUi7C0Itq-SygX-gVlRTmxDu31DU/view?usp=sharing" target="_blank">Project Video</a>
-        <a href="https://drive.google.com/file/d/1_QgnZlzl1BbQcN2WiJthadRUHbEtxuDx/view?usp=sharing" target="_blank">Final Report.pdf</a>
-    </div>
 </div>
 
-<!-- Projet 2 -->
-<div class="project-card">
-    <div class="project-title">Propeller Pitch & Dynamic Thrust Analysis</div>
-
-    <div class="project-images">
-        <img src="images/aero1.png" alt="Propeller thrust analysis experimental setup">
-        <img src="images/aero2.png" alt="Propeller pitch and thrust analysis">
-    </div>
-
-    <div class="project-desc">
-        Conducted an independent physics study exploring how blade pitch angles (0°–45°) impact the thrust generated by a propeller spinning at 3,000 RPM. Built a custom test setup using a 3D-printed stand, a DC motor, and a variable power supply, then measured wind speeds with an anemometer to calculate output force in Newtons. Compared experimental results against theoretical aerodynamic equations and thrust coefficient models, achieving a strong correlation (r = 0.9882) and keeping experimental error within 10%. Wrapped up the project by analyzing setup limitations and proposing practical improvements like using brushless motors and ducting to stabilize airflow.
-    </div>
-
-    <div class="links-list">
-        <a href="https://drive.google.com/file/d/10De-BcuOt8YpmUZaGh4mAfJEjYe49c0h/view?usp=sharing" target="_blank">View Report on Google Drive</a>_
-```
+</body>
+</html>
